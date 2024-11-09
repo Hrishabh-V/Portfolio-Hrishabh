@@ -1,0 +1,54 @@
+/* Apply global smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar styles */
+nav {
+  padding: 16px; /* Same as the p-4 in your JSX */
+  top: 0;
+  z-index: 100;
+}
+
+/* Ensure hover effects only apply to navbar links */
+nav a {
+  text-decoration: none; /* Optional: remove default underline */
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #4eecda; /* Violet text color on hover */
+}
+
+/* Underline hover effect */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+li {
+  position: relative;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] nav a {
+  color: #fff; /* White text for dark mode */
+}
+
+[data-theme="dark"] nav a:hover {
+  color: #4eecda;
+}
+
+[data-theme="dark"] nav a::after {
+  background-color: #4eecda; /* Matching underline color in dark mode */
+}
