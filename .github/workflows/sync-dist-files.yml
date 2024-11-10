@@ -1,0 +1,42 @@
+name: Sync dist files to target repository
+
+on:
+  push:
+    paths:
+      - 'dist/**'  # Trigger on changes inside the dist folder
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the source repository
+      - name: Checkout source repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Git (so we can push to the target repo)
+      - name: Set up Git
+        run: |
+          git config --global user.name "Hrishabh V"
+          git config --global user.email "hrishabh.v1@gmail.com"  # Use your GitHub email
+
+      # Step 3: Clone the target repository
+      - name: Clone target repository
+        run: |
+          git clone https://github.com/Hrishabh-V/Hrishabh-V.github.io.git target-repo
+
+      # Step 4: Copy the dist files from the source repository to the target repository
+      - name: Copy dist files to target repository
+        run: |
+          cp -r dist/* target-repo/  # Copy files inside dist to root of target repo
+
+      # Step 5: Commit and push the changes to the target repository
+      - name: Commit and push changes to target repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the GitHub token for authentication
+        run: |
+          cd target-repo
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Hrishabh-V/Hrishabh-V.github.io.git
+          git add .
+          git commit -m "Sync updated dist files from Portfolio-Hrishabh"
+          git push origin main  # Make sure this is the correct branch in the target repo
