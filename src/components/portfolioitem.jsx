@@ -33,7 +33,7 @@ function PortfolioItem({ title, imgUrl, stack, link, liveLink }) {
                             href={liveLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block bg-blue-500 text-white text-center px-4 py-2 rounded-md hover:bg-blue-600 w-full"
+                            className="block bg-blue-500 text-white text-center px-4 py-2 rounded-md hover:bg-blue-700 w-full"
                         >
                             View Live Project
                         </a>
