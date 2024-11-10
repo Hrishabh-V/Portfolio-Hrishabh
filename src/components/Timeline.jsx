@@ -1,6 +1,6 @@
 import React from "react";
 import timeline from "../data/timeline";
-import TimelineItem from "./TimelineItem";
+import TimelineItem from "./Timelineitem.jsx";
 import Title from "./Title";
 
 function Timeline() {
