@@ -3,7 +3,7 @@ export default [
         year: '2024',
         title: 'Machine Learning Intern',
         company: 'Prodigy Infotech',
-        date: 'Octobet-2024 to November-2024',
+        date: 'October-2024 to November-2024',
         details: [
             "Conducted a benchmarking study comparing Pandas and Polars for linear regression, leading to insights on efficiency improvements that informed project decisions.",
             "Developed K-means clustering and SVM classification models, enhancing accuracy through adaptable analysis and implementation of techniques.",
