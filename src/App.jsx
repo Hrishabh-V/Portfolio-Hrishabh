@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Intro from './components/Intro.jsx';
-import Portfolio from './components/Portfolio';
-import Contact from './components/contact';
-import Footer from './components/footer';
+import Portfolio from './components/Portfolio.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 import './App.css';
-import Timeline from './components/timeline';
-import Navbar from './components/Navbar';  // Correctly import Navbar
+import Timeline from './components/Timeline.jsx';
+import Navbar from './components/Navbar.jsx';  // Correctly import Navbar
 
 function App() {
   const [theme, setTheme] = useState(null);
