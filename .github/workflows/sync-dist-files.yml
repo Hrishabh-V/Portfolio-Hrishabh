@@ -20,17 +20,17 @@ jobs:
           git config --global user.name "Hrishabh V"
           git config --global user.email "hrishabh.v1@gmail.com"  # Use your GitHub email
 
-      # Step 3: Clone the target repository
+      # Step 3: Clone the target repository into the workspace
       - name: Clone target repository
         run: |
           git clone https://github.com/Hrishabh-V/Hrishabh-V.github.io.git target-repo
 
-      # Step 4: Copy the dist files from the source repository to the target repository
+      # Step 4: Copy dist files to the target repository (ensure the dist directory exists)
       - name: Copy dist files to target repository
         run: |
           cp -r dist/* target-repo/  # Copy files inside dist to root of target repo
 
-      # Step 5: Commit and push the changes to the target repository
+      # Step 5: Commit and push changes to the target repository
       - name: Commit and push changes to target repository
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the GitHub token for authentication
