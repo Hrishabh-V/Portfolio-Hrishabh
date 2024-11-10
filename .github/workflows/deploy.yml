@@ -27,8 +27,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Directory to publish, update this if needed
-          target_branch: gh-pages  # Deploy to the gh-pages branch
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Ensure GITHUB_TOKEN has the necessary permissions
+          publish_dir: ./dist  # Directory to publish
+          publish_branch: gh-pages  # Corrected input name
           user_name: 'Hrishabh-V'  # Your GitHub username
           user_email: 'hrishabh.v1@gmail.com'  # Your email address
