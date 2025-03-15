@@ -1,4 +1,16 @@
 export default [
+
+    {
+        "year": "2024",
+        "title": "Associate Engineer Trainee",
+        "company": "Litmus7 Systems Consulting Pvt Ltd",
+        "date": "December 2024 to Present",
+        "details": [
+            "Engaged in a comprehensive training program on Java and SQL, focusing on developing industry-relevant skills and applying them through extensive hands-on practice.",
+            "Gained experience in project management tools like Jira for task tracking and team collaboration, along with proficiency in version control systems for maintaining source code repositories.",
+            "Acquired practical knowledge of Spring Boot for building robust and scalable Java applications, along with expertise in designing and implementing RESTful APIs using JPA for efficient data access and manipulation."
+        ]
+    },
     {
         year: '2024',
         title: 'Machine Learning Intern',
